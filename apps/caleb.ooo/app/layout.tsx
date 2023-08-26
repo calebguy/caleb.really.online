@@ -1,4 +1,5 @@
 import "@ui/styles/globals.css";
+import { cn } from "../../../packages/ui/lib/utils";
 
 export default function RootLayout({
   children,
@@ -7,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={cn("p-10")}>{children}</body>
     </html>
   );
 }
