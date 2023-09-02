@@ -6,6 +6,8 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     '../../packages/ui/components/**/*.{ts,tsx}',
+    '../../apps/caleb.ooo/components/**/*.{ts,tsx}',
+    '../../apps/caleb.ooo/app/**/*.{ts,tsx}'
   ],
   theme: {
     container: {
@@ -50,6 +52,10 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        red: {
+          dark: 'hsl(var(--red-dark))',
+          light: 'hsl(var(--red-light))'
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',
