@@ -1,9 +1,7 @@
-import { Button } from "@ui/components/button";
-
 export default function Page() {
   return (
-    <>
-      <h1 className="text-red-light">be back later</h1>
-    </>
+      <div className="text-red-light flex justify-center items-center h-full">
+        <span className="inline-block">***</span>
+      </div>
   );
 }

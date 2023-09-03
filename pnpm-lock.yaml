@@ -26,6 +26,9 @@ importers:
 
   apps/caleb.online:
     dependencies:
+      db:
+        specifier: workspace:*
+        version: link:../../packages/db
       next:
         specifier: ^13.4.1
         version: 13.4.1(react-dom@18.2.0)(react@18.2.0)
@@ -69,6 +72,9 @@ importers:
 
   apps/caleb.ooo:
     dependencies:
+      db:
+        specifier: workspace:*
+        version: link:../../packages/db
       next:
         specifier: ^13.4.1
         version: 13.4.1(react-dom@18.2.0)(react@18.2.0)
@@ -155,6 +161,9 @@ importers:
 
   apps/is.caleb.online:
     dependencies:
+      db:
+        specifier: '*'
+        version: link:../../packages/db
       next:
         specifier: ^13.4.1
         version: 13.4.1(react-dom@18.2.0)(react@18.2.0)
@@ -195,6 +204,16 @@ importers:
       typescript:
         specifier: ^4.5.3
         version: 4.9.5
+
+  packages/db:
+    dependencies:
+      '@prisma/client':
+        specifier: ^5.2.0
+        version: 5.2.0(prisma@5.2.0)
+    devDependencies:
+      prisma:
+        specifier: ^5.2.0
+        version: 5.2.0
 
   packages/eslint-config-custom:
     dependencies:
@@ -487,6 +506,28 @@ packages:
       picocolors: 1.0.0
       tslib: 2.5.0
     dev: false
+
+  /@prisma/client@5.2.0(prisma@5.2.0):
+    resolution: {integrity: sha512-AiTjJwR4J5Rh6Z/9ZKrBBLel3/5DzUNntMohOy7yObVnVoTNVFi2kvpLZlFuKO50d7yDspOtW6XBpiAd0BVXbQ==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 5.2.0-25.2804dc98259d2ea960602aca6b8e7fdc03c1758f
+      prisma: 5.2.0
+    dev: false
+
+  /@prisma/engines-version@5.2.0-25.2804dc98259d2ea960602aca6b8e7fdc03c1758f:
+    resolution: {integrity: sha512-jsnKT5JIDIE01lAeCj2ghY9IwxkedhKNvxQeoyLs6dr4ZXynetD0vTy7u6wMJt8vVPv8I5DPy/I4CFaoXAgbtg==}
+    dev: false
+
+  /@prisma/engines@5.2.0:
+    resolution: {integrity: sha512-dT7FOLUCdZmq+AunLqB1Iz+ZH/IIS1Fz2THmKZQ6aFONrQD/BQ5ecJ7g2wGS2OgyUFf4OaLam6/bxmgdOBDqig==}
+    requiresBuild: true
 
   /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.5)(react@17.0.2):
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
@@ -2980,6 +3021,14 @@ packages:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     dev: true
+
+  /prisma@5.2.0:
+    resolution: {integrity: sha512-FfFlpjVCkZwrqxDnP4smlNYSH1so+CbfjgdpioFzGGqlQAEm6VHAYSzV7jJgC3ebtY9dNOhDMS2+4/1DDSM7bQ==}
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 5.2.0
 
   /progress@2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}

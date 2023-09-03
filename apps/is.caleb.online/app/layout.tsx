@@ -1,14 +1,21 @@
 import "@ui/styles/globals.css";
 import { cn } from "../../../packages/ui/lib/utils";
+import db, { getIsOnline } from "db"
+import { Metadata } from "next";
+import { redirect } from 'next/navigation'
 
-export default function RootLayout({
+export const metadata: Metadata = {
+  title: 'checking...',
+  description: '🔄',
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en" className="bg-red-dark">
-      <body className={cn("p-10", "bg-red-dark", "text-red-light")}>{children}</body>
-    </html>
-  );
+  if (await getIsOnline()) {
+    return redirect(process.env.ONLINE_URL)
+  }
+  return redirect(process.env.OFFLINE_URL)
 }
