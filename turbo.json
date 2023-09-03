@@ -9,7 +9,7 @@
       "persistent": true
     },
     "build": {
-      "dependsOn": ["^db:generate"],
+      "dependsOn": ["^db:generate", "^db:migrate:deploy"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "db:generate": {
