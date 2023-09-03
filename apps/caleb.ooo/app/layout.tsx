@@ -18,7 +18,6 @@ export default async function RootLayout({
   if (isOnline) {
     redirect(process.env.ONLINE_URL)
   }
-
   return (
     <html lang="en" className="bg-red-dark min-h-screen flex flex-col">
       <body className="p-10 text-red-light bg-red-dark flex-grow h-[1px]">{children}</body>
