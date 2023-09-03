@@ -19,7 +19,6 @@ export default async function RootLayout({
   if (!isOnline) {
     redirect(process.env.OFFLINE_URL)
   }
-
   return (
     <html lang="en">
       <body>{children}</body>
