@@ -3,6 +3,8 @@ import { getIsOnline } from "db";
 import { Metadata } from "next";
 import { redirect } from "next/navigation"
 
+export const revalidate = 1;
+
 export const metadata: Metadata = {
   title: 'online',
   description: '📳',
