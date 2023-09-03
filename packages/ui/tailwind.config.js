@@ -57,6 +57,9 @@ module.exports = {
           light: 'hsl(var(--red-light))'
         }
       },
+      fontFamily: {
+        mono: ['var(--font-simon)'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
