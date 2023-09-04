@@ -3,7 +3,6 @@ version: '3'
 services:
   db:
     image: postgres:13-alpine
-    container_name: me-db
     ports:
       - 5432:5432
     environment:
