@@ -28,7 +28,7 @@ interface ButtonProps extends PropsWithChildren {
 }
 
 const Button = ({children, onClick}: ButtonProps) => {
-  return <button className="hover:scale-105 active:scale-100" onClick={onClick}>
+  return <button className="hover:scale-125 active:scale-100" onClick={onClick}>
     {children}
   </button>
 }
