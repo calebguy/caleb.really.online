@@ -11,13 +11,13 @@ export default function Page() {
 
   const buttons = ["❤️", "❓", "🚩", "💔", "💋", "♦️", "🌹", "❣️", "🎈", "‼️", "❌", "🍷", "❗️", "👹", "🅱️", "👺", "🍓", "📍", "🚨", "🍒", "🚗", "💄", "🔴", "⛽️", "🍎", "🐞", "📌", "🚘", "🥊", "🥩", "🍄", "🆘", "🅰️", "📛", "📮", "🦞"]
   return (
-      <div className="text-red-light flex flex-col items-center h-full gap-8">
-        <div className="inline-block font-bold text-8xl">offline</div>
-        <div className="border-8 border-dashed border-red-light w-full text-8xl p-10 flex justify-between overflow-x-auto flex-shrink-0 space-x-8">
+      <div className="text-red-light flex flex-col items-center h-full gap-4 md:gap-8 text-4xl md:text-8xl">
+        <div className="inline-block font-bold text-7xl md:text-8xl">offline</div>
+        <div className="flex justify-between items-center border-4 md:border-8 border-dashed border-red-light w-full p-4 md:p-10 overflow-x-auto flex-shrink-0 space-x-4 md:space-x-8">
           {buttons.map(buttonText => <Button key={`button-${buttonText}`} onClick={() => onClick(buttonText)}>{buttonText}</Button>)}
         </div>
-        <div className="flex-grow border-8 border-solid border-red-light w-full text-8xl p-10 flex flex-wrap gap-8">
-          {items.map((item, index) => <span key={`item-${item}-${index}`}>{item}</span>)}
+        <div className="flex-grow border-4 md:border-8 border-solid border-red-light w-full p-4 md:p-10">
+          {items.map((item, index) => <span key={`item-${item}-${index}`} className="inline-block">{item}</span>)}
         </div>
       </div>
   );
