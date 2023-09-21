@@ -53,8 +53,12 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))',
         },
         red: {
-          dark: 'hsl(var(--red-dark))',
-          light: 'hsl(var(--red-light))'
+          light: 'hsl(var(--red-light))',
+          dark: 'hsl(var(--red-dark))'
+        },
+        green: {
+          light: 'hsl(var(--green-light))',
+          dark: 'hsl(var(--green-dark))'
         }
       },
       fontFamily: {

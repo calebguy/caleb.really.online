@@ -38,6 +38,9 @@
     /* CUSTOM */
     --red-light: 0 100% 50%;
     --red-dark: 2 100% 5%;
+
+    --green-dark: 101 100% 9%;
+    --green-light: 101 100% 50%;
   }
 }
  

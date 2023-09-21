@@ -38,8 +38,8 @@ export default async function RootLayout({
     }
   }
   return (
-    <html lang="en" className={cn("bg-yellow-900", "min-h-screen", "flex", "flex", "flex-col", "font-mono", simon.variable)}>
-      <body className="p-10 bg-yellow-900 flex-grow h-[1px]">{children}</body>
+    <html lang="en" className={cn("bg-green-dark", "min-h-screen", "flex", "flex", "flex-col", "font-mono", simon.variable)}>
+      <body className="p-10 bg-green-dark flex-grow h-[1px]">{children}</body>
     </html>
   );
 }
