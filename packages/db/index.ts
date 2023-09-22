@@ -41,6 +41,9 @@ export function getOfflineMessages() {
         where: {
             userId: MY_ID,
             availability: Availability.OFFLINE
+        },
+        orderBy: {
+            createdAt: 'desc'
         }
     })
 }
