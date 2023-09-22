@@ -9,7 +9,14 @@ const GET = async () => {
 const POST = async (req: Request) => {
   const { message } = await req.json()
   const dbMessage = await createNewOfflineMessage(message)
+  await sleep(0.5)
   return NextResponse.json(dbMessage)
+}
+
+const sleep = async (ms: number) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms * 1000)
+  })
 }
 
 export { GET, POST }

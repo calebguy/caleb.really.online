@@ -52,3 +52,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+.rotate-3d {
+  	animation: rotateAnimation 1s linear infinite;
+}
+
+@keyframes rotateAnimation {
+	from {transform: rotateY(45deg);}
+	to {transform: rotateY(225deg);}
+}
