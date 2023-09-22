@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { Availability, PrismaClient } from '@prisma/client';
 
 const db = new PrismaClient();
 
@@ -7,7 +7,7 @@ const MY_ID = 1
 export async function getIsOnline() {
     const { isOnline } = await db.userSetting.findFirst({
     where: {
-      users: {
+      user: {
             id: MY_ID
         }
     }})
@@ -32,6 +32,25 @@ export function setOffline() {
         },
         data: {
             isOnline: false
+        }
+    })
+}
+
+export function getOfflineMessages() {
+    return db.message.findMany({
+        where: {
+            userId: MY_ID,
+            availability: Availability.OFFLINE
+        }
+    })
+}
+
+export function createNewOfflineMessage(message: string) {
+    return db.message.create({
+        data: {
+            message,
+            userId: MY_ID,
+            availability: Availability.OFFLINE
         }
     })
 }

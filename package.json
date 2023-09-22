@@ -8,7 +8,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "ui:add": "pnpm --filter ui ui:add",
-    "db:migrate": "dotenv -e .env pnpm --filter db db:migrate",
+    "db:migrate": "dotenv -e .env -- pnpm --filter db db:migrate",
     "down": "pnpm --filter db down"
   },
   "devDependencies": {

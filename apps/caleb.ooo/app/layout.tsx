@@ -4,6 +4,8 @@ import { getIsOnline } from "db";
 import { redirect } from "next/navigation"
 import { Metadata } from "next";
 import localFont from 'next/font/local'
+import { QueryClientProvider, useQueryClient } from "@tanstack/react-query"
+import Providers from "@/components/Providers";
 
 export const revalidate = 1;
 
@@ -39,9 +41,14 @@ export default async function RootLayout({
     }
   }
 
+
   return (
     <html lang="en" className={cn("bg-red-dark", "min-h-screen", "flex", "flex", "flex-col", "font-mono", simon.variable)}>
-      <body className="p-10 text-red-light bg-red-dark flex-grow h-[1px]">{children}</body>
+      <body className="p-10 text-red-light bg-red-dark flex-grow h-[1px]">
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }

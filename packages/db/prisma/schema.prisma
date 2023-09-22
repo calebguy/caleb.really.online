@@ -7,15 +7,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model UserSetting {
-  id        Int      @id @default(autoincrement())
-  userId   Int?
-  isOnline Boolean?
-  users     User?   @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+enum Availability {
+  ONLINE
+  OFFLINE
 }
 
 model User {
-  id            Int             @id @default(autoincrement())
-  name          String?
-  UserSettings UserSetting[]
+  id       Int          @id @default(autoincrement())
+  name     String?
+  messages Message[]
+  settings UserSetting?
+}
+
+model UserSetting {
+  id       Int      @id @default(autoincrement())
+  userId   Int      @unique
+  isOnline Boolean?
+  user     User     @relation(fields: [userId], references: [id])
+}
+
+model Message {
+  id           Int          @id @default(autoincrement())
+  message      String
+  availability Availability @default(OFFLINE)
+  createdAt    DateTime     @default(now())
+  userId       Int
+  user         User         @relation(fields: [userId], references: [id])
 }
