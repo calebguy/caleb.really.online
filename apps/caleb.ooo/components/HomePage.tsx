@@ -66,7 +66,7 @@ export default function HomePage({messages}: HomePageProps) {
   return (
       <div className="text-red-light flex flex-col items-center h-full gap-4 md:gap-8 text-4xl md:text-8xl">
         <div className="inline-block font-bold text-7xl md:text-8xl">offline</div>
-        <div className="flex md:justify-between items-center border-4 md:border-8 border-dashed border-red-light w-full p-4 md:p-10 flex-shrink-0 space-y-2 md:overflow-x-auto flex-wrap md:flex-nowrap">
+        <div className="flex md:justify-between items-center border-4 md:border-8 border-dashed border-red-light w-full p-4 md:p-10 flex-shrink-0 space-y-2 md:overflow-x-auto flex-wrap md:flex-nowrap ooo-scroll">
           {buttons.map(buttonText => <Button className="hover:opacity-100 opacity-30 px-2" variant="blob" size="inherit" key={`button-${buttonText}`} onClick={() => onClick(buttonText)}>{buttonText}</Button>)}
         </div>
         <div className="flex-grow border-4 md:border-8 border-solid border-red-light w-full p-4 md:p-10">

@@ -44,7 +44,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={cn("bg-red-dark", "min-h-screen", "flex", "flex", "flex-col", "font-mono", simon.variable)}>
-      <body className="p-10 text-red-light bg-red-dark flex-grow h-[1px]">
+      <body className="p-10 text-red-light bg-red-dark flex-grow ooo-scroll">
         <Providers>
           {children}
         </Providers>
