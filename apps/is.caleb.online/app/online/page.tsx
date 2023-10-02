@@ -1,4 +1,4 @@
-import db, { setOnline } from "db";
+import { setOnline } from "db";
 import { redirect } from "next/navigation"; 
 
 export default async function OnlinePage() {
