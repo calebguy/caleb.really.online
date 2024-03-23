@@ -38,10 +38,10 @@ export default function HomePage({messages}: HomePageProps) {
     queryKey: ["offline-messages"]
   })
   const mutation = useMutation({
-    mutationFn: postOfflineMessage
-    // onSuccess: () => {
-    //   refetch()
-    // }
+    mutationFn: postOfflineMessage,
+    onSuccess: () => {
+      refetch()
+    }
   })
 
   const [mixedMessages, setMixedMessages] = useState(messages)
