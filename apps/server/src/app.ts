@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   console.log('🧱')
-  res.json({ message: 'hello' });
+  res.json({ message: 'hello there' });
 });
 
 io.on('connection', (socket) => {
