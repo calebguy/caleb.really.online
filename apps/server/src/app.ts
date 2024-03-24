@@ -11,6 +11,7 @@ const io = new Server(server);
 app.use(express.json());
 
 app.get('/', (req, res) => {
+  console.log('🧱')
   res.json({ message: 'hello' });
 });
 
